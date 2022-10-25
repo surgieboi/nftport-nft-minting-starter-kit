@@ -12,6 +12,7 @@ const UploadForm = ({ address }) => {
     const mintingChain = process.env.NEXT_PUBLIC_NFTPORT_MINTING_CHAIN;
 
     const [nftPort, setNftPort] = useState();
+    const [minting, isMinting] = useState(false)
 
     return (
 
@@ -38,6 +39,7 @@ const UploadForm = ({ address }) => {
                     description: ''
                 }}
                 onSubmit={(values, { resetForm, setSubmitting }) => {
+                    isMinting(true);
                     setTimeout(() => {
                         setNftPort();
                         // alert(JSON.stringify(values));
@@ -66,6 +68,7 @@ const UploadForm = ({ address }) => {
                             .then(function (responseJson) {
                                 // console.log(responseJson);
                                 setNftPort(responseJson);
+                                isMinting();
                             })
 
                         setSubmitting(false);
@@ -85,8 +88,8 @@ const UploadForm = ({ address }) => {
                     isSubmitting,
                     isValid,
                 }) => (
-                    <form 
-                        className="flex flex-col" 
+                    <form
+                        className="flex flex-col"
                         onSubmit={handleSubmit}>
 
                         <Field onChange={handleChange} onBlur={handleBlur} id="name" name="name" placeholder="Name" type="text" className={'form-control w-full mb-2 p-4 rounded-2xl border border-slate-200 active:bg-slate-200 focus:outline-none focus:ring focus:ring-slate-200' + (errors.title && touched.title ? ' is-invalid' : '')} />
@@ -115,14 +118,24 @@ const UploadForm = ({ address }) => {
                             Upload an Image
                         </button>
 
-                        <button 
+                        <button
                             className="mb-4 p-4 border border-slate-200 disabled:bg-slate-200 disabled:text-slate-400 enabled:hover:border-slate-400 enabled:hover:text-white enabled:hover:bg-slate-800 rounded-2xl"
-                            type="submit" 
+                            type="submit"
                             disabled={!(isValid && dirty || isSubmitting)}>
                             {isSubmitting ? "Minting..." : "Mint"}
                         </button>
 
-                        {nftPort && !isSubmitting ? <a className="p-4 text-green-600 hover:text-white hover:bg-green-800 border border-green-600 hover:border-green-800 rounded-2xl" href={nftPort.transaction_external_url} target="_blank">View Transaction</a> : <></>}
+                        {nftPort ? (
+                            <a className="p-4 text-green-600 hover:text-white hover:bg-green-800 border border-green-600 hover:border-green-800 rounded-2xl" href={nftPort.transaction_external_url} target="_blank">
+                                View Transaction
+                            </a>
+                        ) : minting === false ? ( 
+                            <p>You will be able to view your transaction on <span style={{textTransform: 'capitalize'}}>{mintingChain}</span> here, once it is ready.</p>
+                        )  :  minting === true ? (
+                            <p>Minting in progress...</p>
+                        ) : (
+                            <></>
+                        )}
                     </form>
                 )}
             </Formik>
