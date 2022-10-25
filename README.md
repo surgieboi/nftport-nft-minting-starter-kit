@@ -2,7 +2,7 @@
 
 <img src="public/og.jpg">
 
-This is a starter kit project for uploading and minting content directly to a Web3 wallet address using [NFTPort](https://www.nftport.xyz/), Next.js's [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), and [Tailwind](https://tailwindui.com/); additionally, it is deployable on [Vercel](https://vercel.com/).
+This is a starter kit for minting NFTs directly to a Web3 wallet address using [NFTPort](https://www.nftport.xyz/), Next.js's [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), and [Tailwind](https://tailwindui.com/); additionally, it is deployable on [Vercel](https://vercel.com/).
 
 ## Getting Started
 
