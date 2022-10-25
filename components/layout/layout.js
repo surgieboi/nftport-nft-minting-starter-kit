@@ -7,7 +7,7 @@ export default function Layout({ children }) {
             <Meta></Meta>
             <Header></Header>
             <main className="px-10">
-                <div className="h-screen w-full flex align-center">
+                <div className="w-full flex align-center">
                     {children}
                 </div>
             </main>

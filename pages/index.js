@@ -18,7 +18,7 @@ export default function Index() {
   if (isConnected) {
     return (
       <>
-        <div className="w-full flex flex-col items-center mt-[210px]">
+        <div className="w-full flex flex-col items-center mt-[210px] mb-12 md:mb-0">
           <h1 className="mb-1 md:mb-2 text-3xl md:text-5xl font-bold text-center">{connector?.name} is Connected</h1>
           <h3 className="text-center mb-5 text-base"><span className="font-bold">Receiving Address:</span> {ensName ? `${ensName} (${address})` : address}</h3>
           <button
