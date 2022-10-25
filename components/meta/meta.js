@@ -13,7 +13,7 @@ export default function Meta() {
             <meta property="og:url" content="https://nftport-nft-minting-starter-kit.vercel.app/og.jpg" />
             <meta property="og:image" content="https://nftport-nft-minting-starter-kit.vercel.app/og.jpg" />
             <meta name="twitter:title" content="NFTPort | NFT Minting Starter Kit" />
-            <meta name="twitter:description" content="NFTPort Creator Minting Starter Kit using NFTPort, Next.js, and Wagmi." />
+            <meta name="twitter:description" content="NFTPort NFT Minting Starter Kit using NFTPort, Next.js, and Wagmi." />
             <meta name="twitter:image" content="https://nftport-nft-minting-starter-kit.vercel.app/og.jpg" />
             <meta name="twitter:card" content="summary_large_image"></meta>
         </Head>
