@@ -10,7 +10,7 @@ This is a starter kit for minting NFTs directly to a Web3 wallet address using [
 
 Wagmi requires an infrastructure provider for connecting Web3 wallets to this applicaton (ex. MetaMask). 
 
-To use Alchemy, complete the following steps:
+To leverage Wagmi, complete the following steps:
 
 1. [Sign-up](https://www.alchemy.com/) and create an Alchemy account
 2. Create an app
