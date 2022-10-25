@@ -47,7 +47,6 @@ export default function Index() {
             onClick={() => connect({ connector })}
           >
             {connector.name}
-            {!connector.ready && ' (Unsupported)'}
             {isLoading &&
               connector.id === pendingConnector?.id &&
               ' is connecting...'}
