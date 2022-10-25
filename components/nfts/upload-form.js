@@ -14,7 +14,7 @@ const UploadForm = ({ address }) => {
     return (
 
         <div className="w-full md:w-6/12 text-center">
-            <p className="mb-6">Complete the following and submit for minting:</p>
+            <p className="mb-6">Complete the form below to mint your NFT:</p>
             <Formik
                 validationSchema={Yup.object().shape({
                     file: Yup.mixed()
