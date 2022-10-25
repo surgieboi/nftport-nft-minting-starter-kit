@@ -39,19 +39,18 @@ export default function Index() {
       <h3 className="mb-6 text-lg md:text-2xl text-center">Connect your wallet and mint NFTs to it</h3>
 
       <div className="w-full flex flex-col sm:flex-row justify-center">
-        {connectors.map((connector) => (
-          <button
-            className="mx-2 mb-3 md:mb-0 p-4 hover:text-white hover:bg-slate-800 border border-slate-200 hover:border-slate-800 rounded-2xl"
-            disabled={!connector.ready}
-            key={connector.id}
-            onClick={() => connect({ connector })}
-          >
-            {connector.name}
-            {isLoading &&
-              connector.id === pendingConnector?.id &&
-              ' is connecting...'}
-          </button>
-        ))}
+
+
+        {connectors
+          .filter((x) => x.ready && x.id !== connector?.id)
+          .map((x) => (
+            <button
+              className="mx-2 mb-3 md:mb-0 p-4 hover:text-white hover:bg-slate-800 border border-slate-200 hover:border-slate-800 rounded-2xl"
+              key={x.id} onClick={() => { connect({ connector: x }); }}>
+              {x.name}
+              {isLoading && x.id === pendingConnector?.id && ' is connecting...'}
+            </button>
+          ))}
       </div>
 
       {error && <div className="mt-6 capitalize invalid">{error.message}</div>}
