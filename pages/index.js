@@ -19,7 +19,7 @@ export default function Index() {
     return (
       <>
         <div className="w-full flex flex-col items-center mt-[210px]">
-          <h1 className="mb-1 md:mb-2 text-3xl md:text-5xl font-bold">{connector?.name} is Connected</h1>
+          <h1 className="mb-1 md:mb-2 text-3xl md:text-5xl font-bold text-center">{connector?.name} is Connected</h1>
           <h3 className="text-center mb-5 text-base"><span className="font-bold">Receiving Address:</span> {ensName ? `${ensName} (${address})` : address}</h3>
           <button
             className="w-full md:w-auto mx-2 mb-6 p-4 hover:text-white hover:bg-slate-800 border border-slate-200 hover:border-slate-800 rounded-2xl"
