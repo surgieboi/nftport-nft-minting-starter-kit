@@ -47,10 +47,10 @@ export default function Index() {
             onClick={() => connect({ connector })}
           >
             {connector.name}
-            {!connector.ready && ' (unsupported)'}
+            {!connector.ready && ' (Unsupported)'}
             {isLoading &&
               connector.id === pendingConnector?.id &&
-              ' (connecting)'}
+              ' is connecting...'}
           </button>
         ))}
       </div>
