@@ -18,7 +18,7 @@ export default function Index() {
   if (isConnected) {
     return (
       <>
-        <div className="w-full flex flex-col items-center mt-[210px] mb-12 md:mb-0">
+        <div className="w-full flex flex-col items-center mt-[210px] mb-[120px]">
           <h1 className="mb-1 md:mb-2 text-3xl md:text-5xl font-bold text-center">{connector?.name} is Connected</h1>
           <h3 className="text-center mb-5 text-base"><span className="font-bold">Receiving Address:</span> {ensName ? `${ensName} (${address})` : address}</h3>
           <button
@@ -33,7 +33,7 @@ export default function Index() {
   }
 
   return (
-    <div className="w-full flex flex-col items-center mt-[210px] md:mt-0 md:justify-center">
+    <div className="w-full md:h-screen flex flex-col items-center justify-center mt-[210px] md:mt-[0px]">
       <p className="mb-8 p-4 text-white text-xs font-medium text-center bg-slate-800 border border-slate-800 rounded-full">NFTPort + Tailwind CSS + Wagmi</p>
       <h1 className="mb-0 md:mb-2 text-3xl md:text-5xl font-bold text-center">Mint NFTs in Seconds</h1>
       <h3 className="mb-6 text-lg md:text-2xl text-center">Connect your wallet and mint NFTs to it</h3>
@@ -55,7 +55,7 @@ export default function Index() {
         ))}
       </div>
 
-      {error && <div className="mt-6 invalid">{error.message}</div>}
+      {error && <div className="mt-6 capitalize invalid">{error.message}</div>}
     </div>
   )
 }
