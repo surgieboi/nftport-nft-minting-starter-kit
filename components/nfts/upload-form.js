@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Field, Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
 import PreviewImage from './preview-image';
@@ -10,6 +10,8 @@ const UploadForm = ({ address }) => {
 
     const apiKey = process.env.NEXT_PUBLIC_NFTPORT_API_KEY;
     const mintingChain = process.env.NEXT_PUBLIC_NFTPORT_MINTING_CHAIN;
+
+    const [nftPort, setNftPort] = useState();
 
     return (
 
@@ -37,8 +39,9 @@ const UploadForm = ({ address }) => {
                 }}
                 onSubmit={(values, { resetForm, setSubmitting }) => {
                     setTimeout(() => {
-                        alert(JSON.stringify(values));
-                        console.log(values);
+                        setNftPort();
+                        // alert(JSON.stringify(values));
+                        // console.log(values);
 
                         const form = new FormData();
                         form.append("file", values.file);
@@ -61,8 +64,8 @@ const UploadForm = ({ address }) => {
                                 return response.json()
                             })
                             .then(function (responseJson) {
-                                // Handle the response
-                                console.log(responseJson);
+                                // console.log(responseJson);
+                                setNftPort(responseJson);
                             })
 
                         setSubmitting(false);
@@ -113,11 +116,13 @@ const UploadForm = ({ address }) => {
                         </button>
 
                         <button 
-                            className="mb-6 p-4 border border-slate-200 disabled:bg-slate-200 disabled:text-slate-400 enabled:hover:border-slate-400 enabled:hover:text-white enabled:hover:bg-slate-800 rounded-2xl"
+                            className="mb-4 p-4 border border-slate-200 disabled:bg-slate-200 disabled:text-slate-400 enabled:hover:border-slate-400 enabled:hover:text-white enabled:hover:bg-slate-800 rounded-2xl"
                             type="submit" 
                             disabled={!(isValid && dirty || isSubmitting)}>
                             {isSubmitting ? "Minting..." : "Mint"}
                         </button>
+
+                        {nftPort && !isSubmitting ? <a className="p-4 text-green-600 hover:text-white hover:bg-green-800 border border-green-600 hover:border-green-800 rounded-2xl" href={nftPort.transaction_external_url} target="_blank">View Transaction</a> : <></>}
                     </form>
                 )}
             </Formik>
