@@ -1,4 +1,4 @@
-# NFTPort Creator Minting Starter Kit
+# NFTPort NFT Minting Starter Kit
 
 <img src="public/og.jpg">
 
