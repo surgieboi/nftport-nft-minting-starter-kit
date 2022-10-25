@@ -46,7 +46,10 @@ export default function Index() {
           .map((x) => (
             <button
               className="mx-2 mb-3 md:mb-0 p-4 hover:text-white hover:bg-slate-800 border border-slate-200 hover:border-slate-800 rounded-2xl"
-              key={x.id} onClick={() => { connect({ connector: x }); }}>
+              key={x.id}
+              onClick={() => {
+                connect({ connector: x });
+              }}>
               {x.name}
               {isLoading && x.id === pendingConnector?.id && ' is connecting...'}
             </button>
