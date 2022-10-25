@@ -35,9 +35,9 @@ Using your Alchemy and NFTPort API keys, complete the following steps to run thi
 4. Run `npm run dev`
 5. View your landing page on `localhost:3000`
 
-### Deploying with Vercel
+### Deploying with Vercel (Optional)
 
-Alternatively, this application can be deployed using Vercel's [Deploy Now](https://vercel.com/docs/deploy-button):
+Optionally, this application can be deployed using Vercel's [Deploy Now](https://vercel.com/docs/deploy-button):
 
 <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsurgieboi%2Fnftport-nft-minting-starter-kit&env=NEXT_PUBLIC_NFTPORT_API_KEY,NEXT_PUBLIC_NFTPORT_MINTING_CHAIN,NEXT_PUBLIC_ALCHEMY_API_KEY"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
 
