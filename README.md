@@ -39,7 +39,7 @@ Using your Alchemy and NFTPort API keys, complete the following steps to run thi
 
 Alternatively, this application can be deployed using Vercel's [Deploy Now](https://vercel.com/docs/deploy-button):
 
-<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsurgieboi%2Fnftport-nft-portfolio-starter-kit&env=NEXT_PUBLIC_NFTPORT_API_KEY,NEXT_PUBLIC_NFTPORT_NFTS_ADDRESS,NEXT_PUBLIC_NFTPORT_CHAIN,NEXT_PUBLIC_NFTPORT_DISPLAY_QUANTITY,NEXT_PUBLIC_NFTPORT_INCLUDE"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsurgieboi%2Fnftport-nft-minting-starter-kit&env=NEXT_PUBLIC_NFTPORT_API_KEY,NEXT_PUBLIC_NFTPORT_MINTING_CHAIN,NEXT_PUBLIC_ALCHEMY_API_KEY"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
 
 Note, deploying to Vercel does not require any knowledge of Javascript, Next.js or software development; however, all required environment variables are needed to successfully deploy this application.
 
