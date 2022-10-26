@@ -36,8 +36,8 @@ export default function Index() {
     <div className="w-full md:h-screen flex flex-col items-center justify-center mt-[210px] md:mt-[0px]">
       <p className="mb-8 p-4 text-white text-xs font-medium text-center bg-slate-800 border border-slate-800 rounded-full">NFTPort + Tailwind CSS + Wagmi</p>
       <h1 className="mb-0 md:mb-2 text-3xl md:text-5xl font-bold text-center">Mint NFTs in Seconds</h1>
-      <h3 className="mb-6 text-lg md:text-2xl text-center">Connect your wallet and mint NFTs to it</h3>
-
+      <h3 className="mb-6 text-lg md:text-2xl text-center">Connect your wallet and mint NFTs for free!</h3>
+      <p className="mb-6">Get started using:</p>
       <div className="w-full flex flex-col sm:flex-row justify-center">
 
 

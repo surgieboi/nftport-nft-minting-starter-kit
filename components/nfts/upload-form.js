@@ -130,7 +130,7 @@ const UploadForm = ({ address }) => {
                                 View Transaction
                             </a>
                         ) : minting === false ? ( 
-                            <p>Once minting is completed, your transaction on <span style={{textTransform: 'capitalize'}}>{mintingChain}</span> will be viewable here.</p>
+                            <p>Once minting is completed, a link to your transaction on <span style={{textTransform: 'capitalize'}}>{mintingChain}</span> will be viewable here. Remember, the <b>receiving address</b> shown above will be the wallet address that your minted NFT is sent to. Moreover, within minutes of minting, your NFT will be viewable on your addresses' profile on marketplaces such as OpenSea and Rarible.</p>
                         )  :  minting === true ? (
                             <p>Minting in progress...</p>
                         ) : (
