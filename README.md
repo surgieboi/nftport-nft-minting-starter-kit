@@ -35,7 +35,7 @@ Using your Alchemy and NFTPort API keys, complete the following steps to run thi
 4. Run `npm run dev`
 5. View your landing page on `localhost:3000`
 
-### Deploying with Vercel (Optional)
+## Deploying with Vercel (Optional)
 
 Optionally, this application can be deployed using Vercel's [Deploy Now](https://vercel.com/docs/deploy-button):
 
