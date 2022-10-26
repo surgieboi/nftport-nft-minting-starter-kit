@@ -69,10 +69,10 @@ const UploadForm = ({ address }) => {
                                 // console.log(responseJson);
                                 setNftPort(responseJson);
                                 isMinting();
+                                resetForm();
                             })
 
                         setSubmitting(false);
-                        resetForm();
                     }, 400);
                 }}
             >
@@ -122,15 +122,15 @@ const UploadForm = ({ address }) => {
                             className="mb-4 p-4 border border-slate-200 disabled:bg-slate-200 disabled:text-slate-400 enabled:hover:border-slate-400 enabled:hover:text-white enabled:hover:bg-slate-800 rounded-2xl"
                             type="submit"
                             disabled={!(isValid && dirty || isSubmitting)}>
-                            {isSubmitting ? "Minting..." : "Mint"}
+                            {minting === true ? "Minting..." : "Mint"}
                         </button>
 
                         {nftPort ? (
-                            <a className="p-4 text-green-600 hover:text-white hover:bg-green-800 border border-green-600 hover:border-green-800 rounded-2xl" href={nftPort.transaction_external_url} target="_blank">
+                            <a className="p-4 text-green-400 hover:text-black hover:bg-green-400 border border-green-400 hover:border-green-400 rounded-2xl" href={nftPort.transaction_external_url} target="_blank">
                                 View Transaction
                             </a>
                         ) : minting === false ? ( 
-                            <p>You will be able to view your transaction on <span style={{textTransform: 'capitalize'}}>{mintingChain}</span> here, once it is ready.</p>
+                            <p>Once minting is completed, your transaction on <span style={{textTransform: 'capitalize'}}>{mintingChain}</span> will be viewable here.</p>
                         )  :  minting === true ? (
                             <p>Minting in progress...</p>
                         ) : (
